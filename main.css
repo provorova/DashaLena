@@ -1,0 +1,25 @@
+body {
+    background-color: lavenderblush;
+    color:firebrick;
+    padding: 10px;
+    font-size:13pt
+}
+
+header {
+    background-color: firebrick;
+    color: lavenderblush;
+    padding: 10px;
+    font-size:13pt
+}
+
+footer {
+    color:firebrick;
+    padding: 10px;
+    font-size:13pt;
+    text-align: right 
+}
+
+a {
+    color: forestgreen;
+    text-decoration: none;
+}
