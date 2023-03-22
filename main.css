@@ -6,14 +6,15 @@ body {
 }
 
 header {
-    background-color: firebrick;
+    background: linear-gradient(to right, red, orange, yellow, green, skyblue, blue, purple);
     color: lavenderblush;
     padding: 10px;
     font-size:13pt
 }
 
 footer {
-    color:firebrick;
+    background: linear-gradient(to right, red, orange, yellow, green, skyblue, blue, purple);
+    color: black;
     padding: 10px;
     font-size:13pt;
     text-align: right 
