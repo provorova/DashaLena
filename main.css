@@ -12,12 +12,38 @@ header {
     font-size:13pt
 }
 
+header:hover {
+    color: black;
+    font-weight: bold;
+    opacity: 0.5s;
+    transition: 800ms 0.3s;
+}
+
+header:active {
+    color: purple;
+    font-size: 20px;
+    transition: 0.3s;
+}
+
 footer {
     background: linear-gradient(to right, red, orange, yellow, green, skyblue, blue, purple);
     color: black;
     padding: 10px;
     font-size:13pt;
     text-align: right 
+}
+
+footer:hover {
+    color: firebrick;
+    font-weight: bold;
+    opacity: 0.5s;
+    transition: 800ms 0.3s;
+}
+
+footer:active {
+    color: black;
+    font-size: 20px;
+    transition: 0.3s;
 }
 
 a {
