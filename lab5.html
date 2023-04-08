@@ -51,6 +51,14 @@
             let author = 'Здравствуйте!\nАвторы страницы:\nКрамар Д.Н., Проворова Е.А.';
             alert(author);
         }
+
+        function changeOutput(buttonNum, backColor, textColor, bdline) {
+            let output = document.getElementById('output');
+            output.innerHTML = 'Нажата кнопка ' + buttonNum;
+            output.style.backgroundColor = backColor;
+            output.style.color = textColor;
+            output.style.border = bdline;
+        }
     </script>
     <style>
         .message {
@@ -65,6 +73,14 @@
             font-size: 20px;
             line-height: 30px;
             display: inline-block;
+        }
+        
+        #output {
+            border: 2px solid;
+            width: 300px;
+            height: 40px;
+            text-align: center;
+            line-height: 40px;
         }
     </style>
 </head>
@@ -81,6 +97,15 @@
         <div class="message" onclick="showPr()">Найти произведение</div>
         <div class="message" onclick="showDl()">Найти деление</div>
         <div class="message" onclick="showAuthor()">Узнать, кто авторы страницы</div>
+
+        <div>
+            <input type="button" value="Кнопка1" onclick="changeOutput(1, 'pink', 'firebrick', 'thick')">
+            <input type="button" value="Кнопка2" onclick="changeOutput(2, 'lightyellow', 'LightCoral', 'dashed')">
+            <input type="button" value="Кнопка3" onclick="changeOutput(3, 'lightCyan', 'SteelBlue', 'solid' )">
+            <input type="button" value="Кнопка4" onclick="changeOutput(4, 'LightCyan', 'LightSeaGreen', 'thick double')">
+        </div>
+
+        <div id="output"></div>
     </main>
 
     <footer onclick="showAuthor()">
