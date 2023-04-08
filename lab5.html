@@ -59,6 +59,22 @@
             output.style.color = textColor;
             output.style.border = bdline;
         }
+
+        function summ() {
+            let input1 = document.getElementById('number1');
+            let input2 = document.getElementById('number2');
+            let input3 = document.getElementById('number3');
+            let input4 = document.getElementById('number4');
+
+            let ya = parseInt(input1.value) ;
+            let gr = parseInt(input2.value);
+            let ap = parseInt(input3.value);
+            let dn = parseInt(input4.value);
+
+            let result = 100*ya + 80*gr + 150*ap + 300*dn;
+            vv.innerHTML = 'Общая цена: ' + result;
+            
+        }
     </script>
     <style>
         .message {
@@ -73,14 +89,38 @@
             font-size: 20px;
             line-height: 30px;
             display: inline-block;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        label {
+            line-height: 25px;
         }
         
         #output {
-            border: 2px solid;
             width: 300px;
             height: 40px;
             text-align: center;
             line-height: 40px;
+            margin-top: 10px;
+        }
+
+        .korzina {
+            margin-top: 20px;
+            width: 300px;
+            height: auto;
+            border: 2px solid;
+            border-radius: 10px;
+            padding: 0px 20px 20px 20px;
+        }
+
+        #vv {
+            line-height: 40px; 
+        }
+        
+        input.button {
+            margin: 5px;
+            background-color: antiquewhite;
         }
     </style>
 </head>
@@ -106,6 +146,16 @@
         </div>
 
         <div id="output"></div>
+
+        <div class="korzina">
+            <h2>Корзина товаров</h2>
+            <label>Яблоки(100р/шт): <br><input type="number" value="0" id="number1"></label><br>
+            <label>Груши(80р/шт): <br><input type="number" value="0" id="number2"></label><br>
+            <label>Апельсины(150р/шт): <br><input type="number" value="0" id="number3"></label><br>
+            <label>Дыни(300р/шт): <br><input type="number" value="0" id="number4" style="margin-bottom: 10px;"></label><br>
+            <input type="button" value="Рассчитать" onclick="summ()">
+            <div id="vv"></div>
+        </div>
     </main>
 
     <footer onclick="showAuthor()">
