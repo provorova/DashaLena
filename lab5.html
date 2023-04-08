@@ -13,6 +13,11 @@
             let result = a + b;
             alert('Сумма ' + a + ' и ' + b + ' равна ' + result);  
         }
+
+        function showAuthor() {
+            let author = 'Здравствуйте!\nАвторы страницы:\nКрамар Д.Н., Проворова Е.А.';
+            alert(author);
+        }
     </script>
     <style>
         .message {
@@ -31,16 +36,16 @@
     </style>
 </head>
 <body>
-    <header>
+    <header onclick="showAuthor()">
 
     </header>
 
     <main>
         <div class="message" onclick="showSum()">Сколько будет 5154+7891?</div>
-        <div class="message">Узнать, кто авторы страницы</div>
+        <div class="message" onclick="showAuthor()">Узнать, кто авторы страницы</div>
     </main>
 
-    <footer>
+    <footer onclick="showAuthor()">
         &copy;Крамар Дарья Николаевна, Проворова Елена Андреевна, ФБИ-11, 2 курс, 2023
     </footer>
 </body>
