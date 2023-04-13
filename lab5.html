@@ -66,14 +66,18 @@
             let input3 = document.getElementById('number3');
             let input4 = document.getElementById('number4');
 
-            let ya = parseInt(input1.value) ;
+            let ya = parseInt(input1.value);
             let gr = parseInt(input2.value);
             let ap = parseInt(input3.value);
             let dn = parseInt(input4.value);
 
             let result = 100*ya + 80*gr + 150*ap + 300*dn;
             vv.innerHTML = 'Общая цена: ' + result;
-            
+        }
+        
+        function pp(n) {
+            let circle = document.getElementById(n);
+            circle.style.visibility = 'hidden';
         }
     </script>
     <style>
@@ -112,16 +116,26 @@
             border: 2px solid;
             border-radius: 10px;
             padding: 0px 20px 20px 20px;
+            margin-bottom: 20px;
         }
 
         #vv {
             line-height: 40px; 
         }
         
-        input.button {
-            margin: 5px;
-            background-color: antiquewhite;
+        .circle {
+            cursor: pointer;
+            display: inline-block;
+            border: 2px solid;
+            width: 100px;
+            height: 100px;
+            border-radius: 50px/50px;
+            text-align: center;
+            font-size: 40px;
+            line-height: 100px;
+            position: relative;
         }
+
     </style>
 </head>
 <body>
@@ -156,6 +170,17 @@
             <input type="button" value="Рассчитать" onclick="summ()">
             <div id="vv"></div>
         </div>
+
+        <div class="circle" id = "1" style = "background-color: aliceblue;" onclick="pp(1)">1</div>
+        <div class="circle" id = "2" style = "background-color: antiquewhite;" onclick="pp(2)">2</div>
+        <div class="circle" id = "3" style = "background-color: bisque;" onclick="pp(3)">3</div>
+        <div class="circle" id = "4" style = "background-color: lavender;" onclick="pp(4)">4</div>
+        <div class="circle" id = "5" style = "background-color: pink;" onclick="pp(5)">5</div>
+        <div class="circle" id = "6" style = "background-color: peachpuff;" onclick="pp(6)">6</div>
+        <div class="circle" id = "7" style = "background-color: navajowhite;" onclick="pp(7)">7</div>
+        <div class="circle" id = "8" style = "background-color: lightcyan;" onclick="pp(8)">8</div>
+        <div class="circle" id = "9" style = "background-color: papayawhip;" onclick="pp(9)">9</div>
+        <div class="circle" id = "10" style = "background-color: lightsalmon;" onclick="pp(10)">10</div>
     </main>
 
     <footer onclick="showAuthor()">
