@@ -56,6 +56,24 @@
             screens[1].style.display = 'block';
             
         }
+
+        function pokaz1() {
+            let sp = document.getElementById('sp');
+            sp.style.display = 'block';
+            let b1 = document.getElementById('b1');
+            b1.style.display = 'none';
+            let b2 = document.getElementById('b2');
+            b2.style.display = 'block';
+        }
+
+        function pokaz2() {
+            let sp = document.getElementById('sp');
+            sp.style.display = 'none';
+            let b1 = document.getElementById('b1');
+            b1.style.display = 'block';
+            let b2 = document.getElementById('b2');
+            b2.style.display = 'none';
+        }
     </script>
     <style>
         .game {
@@ -67,6 +85,17 @@
             margin-top: 20px;
             width: 400px;
             padding: 15px;
+        }
+
+        .p {
+            margin: 10px auto;
+            border-radius: 15px;
+            margin-top: 20px;
+            width: 650px;
+            padding: 15px;
+            color: aliceblue;
+            background-color: pink;
+            color:brown;
         }
     </style>
 </head>
@@ -101,6 +130,22 @@
             <div>
                 <button onclick="again()">Сыграть еще раз</button>
             </div>
+        </div>
+
+        <div class="p">
+            <button id="b1" onclick="pokaz1()">Показать правила игры</button>
+            <button id="b2" onclick="pokaz2()" style="display: none;">Скрыть правила игры</button>
+            <ol id="sp" type="A" style="display: none;">
+                <li>Нажмите на кнопку "Сыграть в игру"</li>
+                <li>Введите число в диапазоне от 1 до 100</li>
+                <li>Нажмите на кнопку "Угадать"</li>
+                <li>Если введенное вами число оказалось меньше или больше загаданного, 
+                    введите новое число и попробуйте еще раз</li>
+                <li>Повторяйте предыдущий пункт до тех пор, пока не появится окно 
+                    уведомляющее о том, что вы угадали число</li>
+                <li>Если вы хотите еще раз сыграть в игру, нажмите кнопку "Сыграть еще раз" и 
+                    повторите все предыдущие пункты</li>
+            </ol>
         </div>
     </main>
 
