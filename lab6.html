@@ -74,6 +74,34 @@
             let b2 = document.getElementById('b2');
             b2.style.display = 'none';
         }
+
+        function changecolor(div) {
+            if (div.style.backgroundColor =='yellow') {
+                div.style.color ='black';
+                div.style.backgroundColor ='red';
+                document.getElementById('color-name').innerHTML = 'красный';
+            }
+            else if (div.style.backgroundColor =='red') {
+                div.style.backgroundColor ='black';
+                div.style.color ='red';
+                document.getElementById('color-name').innerHTML = 'черный';
+            }
+            else if (div.style.backgroundColor =='black') {
+                div.style.backgroundColor ='pink'; 
+                div.style.color ='brown';
+                document.getElementById('color-name').innerHTML = 'розовый';
+            }
+            else if (div.style.backgroundColor =='pink') {
+                div.style.backgroundColor ='lightSkyBlue';
+                div.style.color ='blue';
+                document.getElementById('color-name').innerHTML = 'голубой';
+            }
+            else {
+                div.style.backgroundColor ='yellow';
+                div.style.color ='orange';
+                document.getElementById('color-name').innerHTML = 'желтый';
+            }
+        }
     </script>
     <style>
         .game {
@@ -96,6 +124,17 @@
             color: aliceblue;
             background-color: pink;
             color:brown;
+        }
+
+        .color {
+            margin: 10px auto;
+            margin-top: 20px;
+            border: 1px solid;
+            width: 300px;
+            padding: 15px;
+            color: orange;
+            background-color: yellow;
+            text-align: center;
         }
     </style>
 </head>
@@ -146,6 +185,11 @@
                 <li>Если вы хотите еще раз сыграть в игру, нажмите кнопку "Сыграть еще раз" и 
                     повторите все предыдущие пункты</li>
             </ol>
+        </div>
+
+        <div class="color" ondblclick="changecolor(this)">
+            Цвет: <span id="color-name">желтый</span><br>
+            Сделайте двойной щелчок, чтобы сменить.
         </div>
     </main>
 
