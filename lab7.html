@@ -36,6 +36,17 @@
             let average = sum / exchange.length;
             document.getElementById('detail').innerHTML = 'Среднее значение: ' + average;
         }
+
+        function addBlocks2() {
+            let blocks2 = document.getElementById('blocks2');
+            for (let i = 0; i < 10; i++) {
+                let block2 = document.createElement('div');
+                block2.style.opacity = i*10+'%';
+                block2.innerHTML = 'Блок №' + (i+1);
+
+                blocks2.appendChild(block2);
+            }
+        }
     </script>
 </head>
 <body>
@@ -48,6 +59,9 @@
         <button onclick="showExchange()">Курс доллара</button>
         <table border="1" id="dollar-exchange"></table>
         <div id="detail"></div>
+
+        <button onclick="addBlocks2()">Создать блоки</button>
+        <div id="blocks2"></div>
     </main>
 
     <footer>
