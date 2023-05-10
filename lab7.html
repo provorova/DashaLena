@@ -83,6 +83,53 @@
                 tabls.appendChild(tabl);
             }
         }
+
+        function showprice() {
+            let data = ['08.05.2023','05.05.2023','04.05.2023','03.05.2023','02.05.2023',
+                        '28.04.2023','27.04.2023','26.04.2023','25.04.2023','24.04.2023'];
+            let price = [238.9, 239.89, 237.21, 238.00, 240.25,
+                        240.41, 239.49, 235.33, 235.29, 235.14]
+            let table2 = document.getElementById('share');
+            for (let i = 0; i < data.length; i++) {
+                let trd = document.createElement('tr');
+                let tdd = document.createElement('td');
+                tdd.innerHTML = data [i];
+                let tdp = document.createElement('td');
+                tdp.innerHTML = price [i];
+                trd.appendChild(tdd);
+                trd.appendChild(tdp);
+                if (i > 0) {
+                    let rr = document.createElement('td');
+                    let r = price[i] - price [i-1];
+                    rr.innerHTML = r.toFixed(1);
+                    trd.appendChild(rr);
+                    share.appendChild(trd);
+                }
+                else {
+                    let rr = document.createElement('td');
+                    rr.innerHTML = '-';
+                    trd.appendChild(rr);
+                    share.appendChild(trd);
+                }
+            }
+
+            let sum = 0;
+            let max = 1;
+            let min = 45678;
+            for (let i = 0; i < price.length; i++) {
+                sum = sum + price[i];
+                if (price[i] > max) {
+                    max = price[i];
+                }
+                if (price[i] < min) {
+                    min = price[i];
+                }
+            }
+            let sr = sum / price.length;
+            document.getElementById('pp1').innerHTML = 'Среднее значение: ' + sr.toFixed(0);
+            document.getElementById('pp2').innerHTML = 'Минимальное значение: ' + min;
+            document.getElementById('pp3').innerHTML = 'Максимальное значение: ' + max;
+        }
     </script>
 
     <style>
@@ -109,6 +156,12 @@
 
         <button onclick="tablita()">Таблица умножения на 36</button>
         <div id="tabls"></div>
+
+        <button onclick="showprice()">Курс акций Сбербанка России</button>
+        <table border="1" id="share"></table>
+        <div id="pp1"></div>
+        <div id="pp2"></div>
+        <div id="pp3"></div>
     </main>
 
     <footer>
