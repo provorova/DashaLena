@@ -73,6 +73,16 @@
                 krugi.appendChild(krug);
             }
         }
+
+        function tablita() {
+            let tabls = document.getElementById('tabls');
+            for (let i = 13; i < 34; i++) {
+                let tabl = document.createElement('div');
+                tabl.innerHTML = i + ' * 36 = ' + i*36 ;
+
+                tabls.appendChild(tabl);
+            }
+        }
     </script>
 
     <style>
@@ -96,6 +106,9 @@
         <label>Создание кругов<br><input placeholder="Введите число кругов!" type="number" value="5" id="number"></label><br>
         <button onclick="sokrugi()">коралловое\розовое</button>
         <div id="krugi"></div>
+
+        <button onclick="tablita()">Таблица умножения на 36</button>
+        <div id="tabls"></div>
     </main>
 
     <footer>
