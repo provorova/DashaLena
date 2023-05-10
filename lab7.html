@@ -47,7 +47,37 @@
                 blocks2.appendChild(block2);
             }
         }
+
+        function sokrugi() {
+            let krugi = document.getElementById('krugi');
+            let k = parseInt(number.value);
+            for (let i = k; i > 0; i--) {
+                let krug = document.createElement('div'); 
+                krug.style.display ='inline-block';
+                krug.style.border = '2px solid';
+                krug.style.width = '50px';
+                krug.style.height = '50px';
+                krug.style.borderRadius = '50px/50px';
+                krug.style.fontSize = '20px';
+                krug.style.lineHeight = '50px';
+                krug.style.textAlign = 'center';
+                krug.style.margin = '5px';
+                if (i % 2 == 0) {
+                    krug.style.background = 'pink';
+                }
+                else {
+                    krug.style.background = 'salmon';
+                }
+                krug.innerHTML = i;
+
+                krugi.appendChild(krug);
+            }
+        }
     </script>
+
+    <style>
+        
+    </style>
 </head>
 <body>
     <header>НГТУ, ФБ, Лабораторная работа 6</header>
@@ -62,6 +92,10 @@
 
         <button onclick="addBlocks2()">Создать блоки</button>
         <div id="blocks2"></div>
+
+        <label>Создание кругов<br><input placeholder="Введите число кругов!" type="number" value="5" id="number"></label><br>
+        <button onclick="sokrugi()">коралловое\розовое</button>
+        <div id="krugi"></div>
     </main>
 
     <footer>
