@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Крамар Д.Н., Проворова Е.А. Дабораторная работа 8</title>
     <link rel="stylesheet" href="main.css"> 
-    <script src="lab8.js"></script>
+
     <style>
         
     </style>
@@ -20,10 +20,21 @@
         <div id="current-date3"></div>
         <div id="current-date4"></div>
         <div id="current-date5"></div>
+
+        <div>
+            <label>Дата рождения : <input type="date"></label>
+        </div>
+        <div>
+            <button onclick="showDaysCount()">Показать число дней</button>
+            <button onclick="clearDate()">Очистить поле</button>
+            <div id="dd"></div>
+        </div>
     </main>
 
     <footer>
         &copy;Крамар Дарья Николаевна, Проворова Елена Андреевна, ФБИ-11, 2 курс, 2023
     </footer>
 </body>
+
+<script src="lab8.js"></script>
 </html>
